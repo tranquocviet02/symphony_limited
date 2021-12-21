@@ -1,0 +1,2 @@
+C:\Users\Admin\source\repos\symphony_limited\symphony_limited\obj\Debug\symphony_limited.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\symphony_limited\symphony_limited\obj\Debug\symphony_limited.csproj.CoreCompileInputs.cache

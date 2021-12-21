@@ -13,10 +13,10 @@ namespace symphony_limited.Areas.Backend.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class symphony_limited : DbContext
+    public partial class symphony_limitedEntities : DbContext
     {
-        public symphony_limited()
-            : base("name=symphony_limited")
+        public symphony_limitedEntities()
+            : base("name=symphony_limitedEntities")
         {
         }
     

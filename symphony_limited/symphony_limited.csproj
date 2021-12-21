@@ -62,6 +62,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -147,6 +149,42 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Backend\BackendAreaRegistration.cs" />
+    <Compile Include="Areas\Backend\Models\academy.cs">
+      <DependentUpon>DbConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Backend\Models\Admin.cs">
+      <DependentUpon>DbConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Backend\Models\Course.cs">
+      <DependentUpon>DbConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Backend\Models\DbConnect.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbConnect.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Backend\Models\DbConnect.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Backend\Models\DbConnect.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbConnect.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Backend\Models\Faq.cs">
+      <DependentUpon>DbConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Backend\Models\Student.cs">
+      <DependentUpon>DbConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Backend\Models\sysdiagram.cs">
+      <DependentUpon>DbConnect.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\Backend\Models\Teacher.cs">
+      <DependentUpon>DbConnect.tt</DependentUpon>
+    </Compile>
     <Compile Include="Areas\Frontend\FrontendAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -155,6 +193,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Backend\Models\DbConnect.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DbConnect.edmx</DependentUpon>
+      <LastGenOutput>DbConnect.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Areas\Backend\Models\DbConnect.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DbConnect.edmx</DependentUpon>
+      <LastGenOutput>DbConnect.cs</LastGenOutput>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -169,6 +217,13 @@
     <Content Include="Areas\Backend\Views\web.config" />
     <Content Include="Areas\Frontend\Views\web.config" />
     <Content Include="Areas\Frontend\Views\Shared\_Layout.cshtml" />
+    <EntityDeploy Include="Areas\Backend\Models\DbConnect.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DbConnect.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Areas\Backend\Models\DbConnect.edmx.diagram">
+      <DependentUpon>DbConnect.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -194,7 +249,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Backend\Controllers\" />
-    <Folder Include="Areas\Backend\Models\" />
     <Folder Include="Areas\Backend\Views\Shared\" />
     <Folder Include="Areas\Frontend\Controllers\" />
     <Folder Include="Areas\Frontend\Models\" />
@@ -212,6 +266,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

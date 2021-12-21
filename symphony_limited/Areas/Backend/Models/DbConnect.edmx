@@ -166,7 +166,7 @@ warning 6013: The table/view 'symphony_limited.dbo.Result' does not have a prima
           <Property Name="NameTeachear" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Experience" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="symphony_limited" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="symphony_limitedEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="academies" EntityType="Self.academy" />
           <EntitySet Name="Admins" EntityType="Self.Admin" />
           <EntitySet Name="Courses" EntityType="Self.Course" />
@@ -180,7 +180,7 @@ warning 6013: The table/view 'symphony_limited.dbo.Result' does not have a prima
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="symphony_limitedModelStoreContainer" CdmEntityContainer="symphony_limited">
+        <EntityContainerMapping StorageEntityContainer="symphony_limitedModelStoreContainer" CdmEntityContainer="symphony_limitedEntities">
           <EntitySetMapping Name="academies">
             <EntityTypeMapping TypeName="symphony_limitedModel.academy">
               <MappingFragment StoreEntitySet="academy">
