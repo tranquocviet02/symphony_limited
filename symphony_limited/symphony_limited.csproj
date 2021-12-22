@@ -185,6 +185,7 @@
     <Compile Include="Areas\Backend\Models\Teacher.cs">
       <DependentUpon>DbConnect.tt</DependentUpon>
     </Compile>
+    <Compile Include="Areas\Frontend\Controllers\HomeController.cs" />
     <Compile Include="Areas\Frontend\FrontendAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -224,6 +225,7 @@
     <Content Include="Areas\Backend\Models\DbConnect.edmx.diagram">
       <DependentUpon>DbConnect.edmx</DependentUpon>
     </Content>
+    <Content Include="Areas\Frontend\Views\Home\Home.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -250,7 +252,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Backend\Controllers\" />
     <Folder Include="Areas\Backend\Views\Shared\" />
-    <Folder Include="Areas\Frontend\Controllers\" />
     <Folder Include="Areas\Frontend\Models\" />
     <Folder Include="Models\" />
   </ItemGroup>
