@@ -204,6 +204,7 @@
       <DependentUpon>DbConnect.edmx</DependentUpon>
       <LastGenOutput>DbConnect.cs</LastGenOutput>
     </Content>
+    <Content Include="assets\client\images\Logo.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -225,7 +226,12 @@
     <Content Include="Areas\Backend\Models\DbConnect.edmx.diagram">
       <DependentUpon>DbConnect.edmx</DependentUpon>
     </Content>
-    <Content Include="Areas\Frontend\Views\Home\Home.cshtml" />
+    <Content Include="Areas\Frontend\Views\Home\Index.cshtml" />
+    <Content Include="assets\client\css\header.less" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -236,7 +242,6 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\less.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
